@@ -11,6 +11,17 @@ export default function Header() {
             <img src={Logo} alt="" />
             <div className="logotext">FLEX PT</div>
           </div>
+          <ul className="nav_menu">
+            <li>
+              <a href="/">HOME</a>
+            </li>
+            <li>
+              <a href="/location">LOCATION</a>
+            </li>
+            <li>
+              <a href="/contact">CONTACT</a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
