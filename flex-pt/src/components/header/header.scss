@@ -1,0 +1,34 @@
+header {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(13, 13, 13);
+
+  .inline {
+    width: 1600px;
+    height: 100%;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+
+    .left {
+      width: 600px;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        img {
+          height: 90px;
+        }
+
+        .logotext {
+          margin-left: 10px;
+          display: inline-block;
+          color: rgb(195, 134, 87);
+          font-family: "Sedgwick Ave", cursive;
+          font-style: normal;
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
