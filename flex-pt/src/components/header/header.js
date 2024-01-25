@@ -19,7 +19,20 @@ export default function Header() {
               <a href="/location">LOCATION</a>
             </li>
             <li>
+              <a href="/program">PROGRAM</a>
+            </li>
+            <li>
               <a href="/contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+        <div className="right">
+          <ul>
+            <li>
+              <a href="/login">Login</a>
+            </li>
+            <li>
+              <a href="/register">Register</a>
             </li>
           </ul>
         </div>
