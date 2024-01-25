@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./header.scss";
 import Logo from "../../images/flex-pt-logo.jpeg";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const logoclick = useRef(null);
+  const navigate = useNavigate();
+  useEffect(() => {
+    logoclick.current.addEventListener("click", () => {
+      navigate("/");
+    });
+  }, []);
+
   return (
     <header>
       <div className="inline">
         <div className="left">
-          <div className="logo">
+          <div className="logo" ref={logoclick}>
             <img src={Logo} alt="" />
             <div className="logotext">FLEX PT</div>
           </div>
