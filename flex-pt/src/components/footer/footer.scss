@@ -1,4 +1,53 @@
 .footer {
-  height: 600px;
+  height: 280px;
+  color: white;
   background-color: rgb(13, 13, 13);
+  display: flex;
+  justify-content: center;
+
+  .inline {
+    width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px 0 10px;
+    font-family: "Space Mono", monospace;
+
+    .left {
+      padding-left: 10px;
+      .footerlogo {
+        color: rgb(195, 134, 87);
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+
+      .address {
+        font-size: 13px;
+        margin-bottom: 13px;
+      }
+
+      .tel {
+        font-size: 13px;
+        margin-bottom: 55px;
+      }
+    }
+
+    .right {
+      padding-right: 20px;
+      .sns {
+        display: flex;
+
+        a {
+          padding: 7px 7px 3px 7px;
+          margin-right: 20px;
+          background-color: rgb(200, 200, 200);
+          border-radius: 30px;
+        }
+
+        img {
+          height: 30px;
+        }
+      }
+    }
+  }
 }
