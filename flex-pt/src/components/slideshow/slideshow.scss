@@ -1,0 +1,48 @@
+.slide {
+  width: 200%;
+  height: 800px;
+  position: relative;
+  top: 90px;
+
+  .images {
+    width: 400vw;
+    height: 730px;
+    display: flex;
+    position: absolute;
+    transition: all 0.5s;
+
+    img {
+      width: 100vw;
+      height: 730px;
+    }
+  }
+
+  .blur {
+    width: 100vw;
+    height: 730px;
+    background-color: rgba(13, 13, 13, 0.6);
+    color: white;
+    position: absolute;
+
+    .movearrows {
+      height: 93%;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+
+      div {
+        width: 18px;
+        height: 18px;
+        margin: 0 7px;
+        background-color: white;
+        border-radius: 50px;
+      }
+
+      div:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

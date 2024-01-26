@@ -15,3 +15,7 @@
 header {
   position: fixed;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

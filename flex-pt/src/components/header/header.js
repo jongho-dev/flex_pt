@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.scss";
-import Logo from "../../images/flex-pt-logo.jpeg";
+import Logo from "../../images/logo/flex-pt-logo.jpeg";
 
 export default function Header() {
   return (

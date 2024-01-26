@@ -18,6 +18,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: rgb(13, 13, 13);
+  z-index: 999;
 
   .inline {
     width: 1600px;

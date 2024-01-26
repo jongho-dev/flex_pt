@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.scss";
-import InstaLogo from "../../images/insta-logo.png";
-import BlogLogo from "../../images/blog-logo.png";
+import InstaLogo from "../../images/logo/insta-logo.png";
+import BlogLogo from "../../images/logo/blog-logo.png";
 
 export default function Footer() {
   return (
