@@ -13,19 +13,37 @@
 
     img {
       width: 100vw;
-      height: 730px;
+      height: 790px;
     }
   }
 
   .blur {
     width: 100vw;
-    height: 730px;
+    height: 790px;
     background-color: rgba(13, 13, 13, 0.6);
     color: white;
     position: absolute;
 
     .movearrows {
-      height: 93%;
+      height: 94%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        padding: 20px;
+        margin: 15px;
+
+        .a-icon {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      div:hover {
+        cursor: pointer;
+        color: rgb(195, 134, 87);
+      }
     }
 
     .dots {
@@ -33,10 +51,10 @@
       justify-content: center;
 
       div {
-        width: 18px;
-        height: 18px;
+        width: 14px;
+        height: 14px;
         margin: 0 7px;
-        background-color: white;
+        border: 2px solid white;
         border-radius: 50px;
       }
 
