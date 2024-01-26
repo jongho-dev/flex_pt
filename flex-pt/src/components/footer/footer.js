@@ -8,7 +8,7 @@ export default function Footer() {
     <div className="footer">
       <div className="inline">
         <div className="left">
-          <div className="footerlogo">FLEX PT</div>
+          <div className="footerlogo">FLEX PT STUDIO</div>
           <div className="address">서울특별시 서대문구 연희맛로 32, B1F</div>
           <div className="tel">Tel. 010-7758-8354 | 0507-1347-8354</div>
         </div>

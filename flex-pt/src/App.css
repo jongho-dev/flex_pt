@@ -16,6 +16,9 @@ header {
   position: fixed;
 }
 
+.headerhigh {
+  height: 90px;
+}
 ::-webkit-scrollbar {
   display: none;
 }

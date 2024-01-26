@@ -1,4 +1,62 @@
 .login {
+  height: 575px;
   background-color: white;
-  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+
+  form {
+    width: 430px;
+    height: 430px;
+    padding: 10px 0px 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .loginlogo {
+      font-family: "Space Mono", monospace;
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    input {
+      height: 45px;
+      border: 1px solid #e5e7eb;
+      padding: 0 10px;
+      font-family: "Space Mono", monospace;
+      font-size: 12.5px;
+      outline: none;
+    }
+
+    .pw {
+      border-top: none;
+    }
+
+    button {
+      height: 45px;
+      margin-top: 50px;
+      background-color: rgb(195, 134, 87);
+      color: white;
+      border: none;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: #c4c4c4;
+      color: black;
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: black;
+        font-size: 13px;
+        padding: 4px 0;
+      }
+    }
+  }
 }
