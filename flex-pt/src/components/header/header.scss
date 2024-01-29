@@ -87,4 +87,46 @@ header {
       }
     }
   }
+
+  .inline-reduct {
+    width: 950px;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .menu {
+      font-size: 30px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu:hover {
+      cursor: pointer;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      img {
+        width: 65px;
+        height: 60px;
+      }
+
+      .logotext {
+        margin-left: 6px;
+        display: inline-block;
+        color: rgb(195, 134, 87);
+        font-family: "Sedgwick Ave", cursive;
+        font-style: normal;
+        font-size: 25px;
+      }
+    }
+
+    .logo:hover {
+      cursor: pointer;
+    }
+  }
 }
