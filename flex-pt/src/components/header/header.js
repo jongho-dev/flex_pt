@@ -80,7 +80,7 @@ export default function Header() {
           <img src={Logo} alt="" />
           <div className="logotext">FLEX PT</div>
         </a>
-        <div></div>
+        <div className="sizebox"></div>
       </div>
       <div className="backblur" ref={backblur} onClick={sidemenuClose}></div>
       <div className="sidemenu" ref={sidemenu}>
