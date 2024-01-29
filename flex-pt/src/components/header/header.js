@@ -2,14 +2,12 @@ import React, { useRef, useEffect } from "react";
 import "./header.scss";
 import Logo from "../../images/logo/flex-pt-logo.jpeg";
 import { IoMdMenu } from "react-icons/io";
-import { IoCloseOutline } from "react-icons/io5";
 
 export default function Header() {
   const hd = useRef();
   const hd_rd = useRef();
   const sidemenu = useRef();
   const sidem_openbtn = useRef();
-  const sidem_closebtn = useRef();
   const backblur = useRef();
 
   function changeHeader() {
@@ -28,7 +26,7 @@ export default function Header() {
   }
 
   function sidemenuClose() {
-    sidemenu.current.style.transform = "translate(-360px,0)";
+    sidemenu.current.style.transform = "translate(-260px,0)";
     backblur.current.style.display = "none";
   }
 
@@ -86,32 +84,21 @@ export default function Header() {
       </div>
       <div className="backblur" ref={backblur} onClick={sidemenuClose}></div>
       <div className="sidemenu" ref={sidemenu}>
-        <div className="side_left">
-          <div className="profile"></div>
-          <ul className="menu">
-            <li>
-              <a href="/">HOME</a>
-            </li>
-            <li>
-              <a href="/location">LOCATION</a>
-            </li>
-            <li>
-              <a href="/program">PROGRAM</a>
-            </li>
-            <li>
-              <a href="/contact">CONTACT</a>
-            </li>
-          </ul>
-        </div>
-        <div className="side_right">
-          <div
-            className="closebtn"
-            ref={sidem_closebtn}
-            onClick={sidemenuClose}
-          >
-            <IoCloseOutline />
-          </div>
-        </div>
+        <div className="profile">회원 정보</div>
+        <ul className="menu">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+          <li>
+            <a href="/location">LOCATION</a>
+          </li>
+          <li>
+            <a href="/program">PROGRAM</a>
+          </li>
+          <li>
+            <a href="/contact">CONTACT</a>
+          </li>
+        </ul>
       </div>
     </header>
   );
