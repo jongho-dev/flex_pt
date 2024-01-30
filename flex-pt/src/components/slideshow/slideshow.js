@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import "./slideshow.scss";
 import slideImage1 from "../../images/slideshow/slide1.jpeg";
 import slideImage2 from "../../images/slideshow/slide2.jpeg";
+import mainImage from "../../images/slideshow/mainpic.jpg";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 export default function Slideshow() {
@@ -26,15 +27,14 @@ export default function Slideshow() {
     larrow.current.addEventListener("click", () => {
       if (currentdot >= 2) {
         imgs.current.style.transform =
-          "translateX(" + (2 - currentdot) * 100 + "vw)";
+          "translateX(" + (2 - currentdot) * 93 + "vw)";
         setCurrentdot(currentdot - 1);
       }
     });
 
     rarrow.current.addEventListener("click", () => {
       if (currentdot <= 1) {
-        imgs.current.style.transform =
-          "translateX(" + currentdot * -100 + "vw)";
+        imgs.current.style.transform = "translateX(" + currentdot * -93 + "vw";
         setCurrentdot(currentdot + 1);
       }
     });
@@ -42,7 +42,7 @@ export default function Slideshow() {
   return (
     <div className="slide">
       <div className="images" ref={imgs}>
-        <img src={slideImage1} />
+        <img src={mainImage} />
         <img src={slideImage2} />
       </div>
       <div className="blur">
@@ -59,14 +59,16 @@ export default function Slideshow() {
             className="d1"
             ref={dot1}
             style={{
-              backgroundColor: currentdot == 1 ? "white" : "rgba(0,0,0,0)",
+              backgroundColor: currentdot == 1 ? "white" : "#ffffff66",
+              width: currentdot == 1 ? "37px" : "12px",
             }}
           ></div>
           <div
             className="d2"
             ref={dot2}
             style={{
-              backgroundColor: currentdot == 2 ? "white" : "rgba(0,0,0,0)",
+              backgroundColor: currentdot == 2 ? "white" : "#ffffff66",
+              width: currentdot == 2 ? "37px" : "12px",
             }}
           ></div>
           {/* <div className="d3"></div>

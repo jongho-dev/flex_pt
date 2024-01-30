@@ -1,23 +1,27 @@
 .slide {
   width: 200%;
-  height: 800px;
+  height: 47vw;
   position: relative;
+  background-color: rgb(13, 13, 13);
   .images {
     width: 400vw;
     height: 730px;
     display: flex;
     position: absolute;
+    left: 3.5vw;
     transition: all 0.5s;
 
     img {
-      width: 100vw;
-      height: 790px;
+      width: 90vw;
+      height: 45vw;
+      margin: 0 1.5vw;
+      border-radius: 30px;
     }
   }
 
   .blur {
     width: 100vw;
-    height: 790px;
+    height: 45vw;
     background-color: rgba(13, 13, 13, 0.6);
     color: white;
     position: absolute;
@@ -30,7 +34,7 @@
 
       div {
         padding: 20px;
-        margin: 15px;
+        margin: 0 6vw;
 
         .a-icon {
           width: 30px;
@@ -47,13 +51,12 @@
     .dots {
       display: flex;
       justify-content: center;
-
       div {
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         margin: 0 7px;
-        border: 2px solid white;
         border-radius: 50px;
+        transition: all 0.5s;
       }
 
       div:hover {
