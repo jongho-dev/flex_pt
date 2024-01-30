@@ -3,6 +3,7 @@
   height: 47vw;
   position: relative;
   background-color: rgb(13, 13, 13);
+
   .images {
     width: 400vw;
     height: 730px;
@@ -10,6 +11,7 @@
     position: absolute;
     left: 3.5vw;
     transition: all 0.5s;
+    color: red;
 
     img {
       width: 90vw;
@@ -22,7 +24,7 @@
   .blur {
     width: 100vw;
     height: 45vw;
-    background-color: rgba(13, 13, 13, 0.6);
+    background-color: rgba(13, 13, 13, 0.4);
     color: white;
     position: absolute;
 
@@ -51,6 +53,7 @@
     .dots {
       display: flex;
       justify-content: center;
+
       div {
         width: 12px;
         height: 12px;

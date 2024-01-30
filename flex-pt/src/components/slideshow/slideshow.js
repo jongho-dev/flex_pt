@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./slideshow.scss";
-import slideImage1 from "../../images/slideshow/slide1.jpeg";
 import slideImage2 from "../../images/slideshow/slide2.jpeg";
 import mainImage from "../../images/slideshow/mainpic.jpg";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
