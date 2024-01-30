@@ -41,7 +41,14 @@ export default function Slideshow() {
   return (
     <div className="slide">
       <div className="images" ref={imgs}>
-        <img src={mainImage} />
+        <div className="img1">
+          <img src={mainImage} />
+          <div className="txt1">대형 헬스장과는 다르다! </div>
+          <div className="txt2">수업의 퀄리티를 보셔야 합니다. </div>
+          <div className="txt3">
+            30년 이상의 경력, 오랜 경험과 노하우로 운동 지도{" "}
+          </div>
+        </div>
         <img src={slideImage2} />
       </div>
       <div className="blur">

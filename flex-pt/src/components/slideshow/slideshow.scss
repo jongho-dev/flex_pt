@@ -1,6 +1,6 @@
 .slide {
   width: 200%;
-  height: 47vw;
+  height: 44.6vw;
   position: relative;
   background-color: rgb(13, 13, 13);
 
@@ -11,11 +11,36 @@
     position: absolute;
     left: 3.5vw;
     transition: all 0.5s;
-    color: red;
+
+    .img1 {
+      div {
+        position: absolute;
+        width: 90vw;
+        font-family: "Orbit", sans-serif;
+        font-weight: 800;
+        color: white;
+        text-align: center;
+      }
+
+      .txt1 {
+        font-size: 1.3vw;
+        top: 16.5vw;
+      }
+
+      .txt2 {
+        font-size: 1.3vw;
+        top: 18.5vw;
+      }
+
+      .txt3 {
+        font-size: 2.3vw;
+        top: 22.5vw;
+      }
+    }
 
     img {
       width: 90vw;
-      height: 45vw;
+      height: 43.8vw;
       margin: 0 1.5vw;
       border-radius: 30px;
     }
@@ -23,13 +48,12 @@
 
   .blur {
     width: 100vw;
-    height: 45vw;
-    background-color: rgba(13, 13, 13, 0.4);
+    height: 43.8vw;
     color: white;
     position: absolute;
 
     .movearrows {
-      height: 94%;
+      height: 96%;
       display: flex;
       justify-content: space-between;
       align-items: center;
