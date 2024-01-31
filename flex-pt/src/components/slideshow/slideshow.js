@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./slideshow.scss";
-import slideImage2 from "../../images/slideshow/slide2.jpeg";
+import slideImage2 from "../../images/slideshow/slide2.jpg";
 import mainImage from "../../images/slideshow/mainpic.jpg";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
@@ -49,7 +49,17 @@ export default function Slideshow() {
             30년 이상의 경력, 오랜 경험과 노하우로 운동 지도{" "}
           </div>
         </div>
-        <img src={slideImage2} />
+        <div className="img2">
+          <img src={slideImage2} />
+          {/* <div className="txt4">FLEX PT STUDIO 혜택</div>
+          <ul className="txt5">
+            <li>1. 100만원 이상 결제시 월 5만원으로 스튜디오 이용 가능</li>
+            <li>2. 수업 외에 운동 가능</li>
+            <li>3. 회원님 24시 언제든지 자유운동 가능</li>
+            <li>4. 개인 홈짐처럼 편하게 이용 가능</li>
+            <li>5. 개인 샤워부스 / 유니폼, 수건 무료</li>
+          </ul> */}
+        </div>
       </div>
       <div className="blur">
         <div className="movearrows">
