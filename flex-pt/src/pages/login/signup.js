@@ -23,6 +23,16 @@ export default function SignUpPage() {
           4. ~~~~~~~~~~~
           <br />
           5. ~~~~~~~~~~~
+          <br />
+          6. ~~~~~~~~~~~
+          <br />
+          7. ~~~~~~~~~~~
+          <br />
+          8. ~~~~~~~~~~~
+          <br />
+          9. ~~~~~~~~~~~
+          <br />
+          10. ~~~~~~~~~~~
         </div>
         <div>
           <input type="checkbox" />
@@ -37,6 +47,14 @@ export default function SignUpPage() {
           2. ~~~~~~~~~~~
           <br />
           3. ~~~~~~~~~~~
+        </div>
+        <div className="btns">
+          <a href="/login" className="cancel">
+            취소
+          </a>
+          <a href="/signupnext" className="next">
+            다음
+          </a>
         </div>
       </form>
     </div>
