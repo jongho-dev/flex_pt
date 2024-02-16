@@ -7,6 +7,7 @@ import LocationPage from "./pages/location/location.js";
 import ProgramPage from "./pages/program/program.js";
 import ContactPage from "./pages/contact/contact.js";
 import LoginPage from "./pages/login/login.js";
+import SignUpCheckPage from "./pages/login/signup_c.js";
 import SignUpPage from "./pages/login/signup.js";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/program" element={<ProgramPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup_c" element={<SignUpCheckPage />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
       <Footer />

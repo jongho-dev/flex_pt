@@ -6,56 +6,13 @@ export default function SignUpPage() {
     <div className="signup">
       <div className="signuplogo">회원가입</div>
       <form action="">
-        <div>
-          <input type="checkbox" />
-          <span>이용약관 동의</span>
-          <span className="red">(필수)</span>
-        </div>
-        <div className="txt">
-          이용약관 설명
-          <br />
-          1. ~~~~~~~~~~~
-          <br />
-          2. ~~~~~~~~~~~
-          <br />
-          3. ~~~~~~~~~~~
-          <br />
-          4. ~~~~~~~~~~~
-          <br />
-          5. ~~~~~~~~~~~
-          <br />
-          6. ~~~~~~~~~~~
-          <br />
-          7. ~~~~~~~~~~~
-          <br />
-          8. ~~~~~~~~~~~
-          <br />
-          9. ~~~~~~~~~~~
-          <br />
-          10. ~~~~~~~~~~~
-        </div>
-        <div>
-          <input type="checkbox" />
-          <span>개인정보 수집 및 이용 동의</span>
-          <span className="red">(필수)</span>
-        </div>
-        <div className="txt">
-          개인정보 수집 및 이용 동의 설명
-          <br />
-          1. ~~~~~~~~~~~
-          <br />
-          2. ~~~~~~~~~~~
-          <br />
-          3. ~~~~~~~~~~~
-        </div>
-        <div className="btns">
-          <a href="/login" className="cancel">
-            취소
-          </a>
-          <a href="/signupnext" className="next">
-            다음
-          </a>
-        </div>
+        <input type="text" className="inputid" placeholder="아이디" />
+        <input type="text" className="inputpw" placeholder="비밀번호" />
+        <input type="text" className="inputpw_re" placeholder="비밀번호 확인" />
+        <input type="text" className="name" placeholder="이름" />
+        <input type="text" className="phone" placeholder="휴대폰번호" />
+        <input type="text" className="birth" placeholder="생년월일 8자리" />
+        <button>가입하기</button>
       </form>
     </div>
   );

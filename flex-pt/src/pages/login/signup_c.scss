@@ -1,0 +1,64 @@
+.signup_c {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Space Mono", monospace;
+
+  .signuplogo {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 45px;
+    padding: 6px 10px;
+    border-bottom: 1px solid rgb(13, 13, 13);
+  }
+
+  form {
+    div {
+      margin: 10px 0;
+
+      input {
+        margin-right: 3px;
+      }
+      span {
+        margin-left: 4px;
+      }
+
+      .red {
+        color: red;
+      }
+    }
+
+    .txt {
+      width: 35vw;
+      height: 180px;
+      border: 1px solid black;
+      overflow-y: scroll;
+    }
+
+    .btns {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+
+      a {
+        padding: 10px 3vw;
+        margin: 2px;
+        color: white;
+      }
+      .cancel {
+        background-color: white;
+        color: black;
+      }
+
+      .next {
+        background-color: rgb(13, 13, 13);
+      }
+
+      a:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
