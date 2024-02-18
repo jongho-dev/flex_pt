@@ -24,7 +24,7 @@ export default function LoginPage() {
   return (
     <div className="login">
       <form action="" onSubmit={onSubmit}>
-        <div className="loginlogo">로그인</div>
+        <div className="loginlogo">FLEX PT</div>
         <input
           className="id"
           placeholder="아이디"
@@ -41,7 +41,7 @@ export default function LoginPage() {
         <button>로그인</button>
         <div className="links">
           <a href="/signup_c">회원가입</a>
-          <a href="">아이디, 비밀번호 찾기</a>
+          <a href="/findidpw">아이디, 비밀번호 찾기</a>
         </div>
       </form>
     </div>

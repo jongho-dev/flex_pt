@@ -1,5 +1,5 @@
 .login {
-  height: 575px;
+  height: 600px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -7,31 +7,28 @@
   font-family: "Space Mono", monospace;
 
   form {
-    width: 430px;
-    height: 430px;
-    padding: 10px 0px 80px 0;
+    width: 450px;
+    height: 440px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
     .loginlogo {
-      width: 130px;
-      font-family: "Space Mono", monospace;
-      font-size: 35px;
+      width: 180px;
+      margin: 10px 135px 80px 135px;
       text-align: center;
-      margin: 0 150px 45px 150px;
-
-      padding: 6px 2px;
-      border-bottom: 1px solid rgb(13, 13, 13);
+      font-family: "Sedgwick Ave", cursive;
+      font-size: 49px;
+      font-weight: bold;
     }
 
     input {
-      height: 45px;
-      border: 1px solid #e5e7eb;
+      height: 52px;
       padding: 0 10px;
-      font-family: "Space Mono", monospace;
-      font-size: 15px;
+      margin: 0 20px;
+      border: 1px solid #e5e7eb;
       outline: none;
+      font-family: "Space Mono", monospace;
+      font-size: 17px;
     }
 
     .pw {
@@ -39,27 +36,29 @@
     }
 
     button {
-      height: 45px;
-      margin-top: 50px;
-      background-color: rgb(195, 134, 87);
+      height: 52px;
+      margin: 40px 20px 0 20px;
+      background-color: rgb(235, 146, 78);
       color: white;
       border: none;
+      border-radius: 3px;
+      font-size: 17px;
     }
 
     button:hover {
       cursor: pointer;
-      background-color: #c4c4c4;
-      color: black;
+      background-color: rgb(220, 131, 63);
     }
 
     .links {
+      margin: 0 20px;
       display: flex;
       justify-content: space-between;
 
       a {
-        color: black;
-        font-size: 13px;
         padding: 8px 0;
+        color: black;
+        font-size: 15px;
       }
     }
   }

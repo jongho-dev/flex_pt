@@ -1,64 +1,108 @@
 .signup_c {
   height: 700px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   font-family: "Space Mono", monospace;
 
-  .signuplogo {
-    font-size: 35px;
-    text-align: center;
-    margin-bottom: 45px;
-    padding: 6px 10px;
-    border-bottom: 1px solid rgb(13, 13, 13);
-  }
-
   form {
-    div {
-      margin: 10px 0;
+    width: 450px;
+    height: 650px;
+    padding: 0 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
 
-      input {
-        margin-right: 3px;
-      }
-      span {
-        margin-left: 4px;
+    .signuplogo {
+      margin-bottom: 40px;
+      font-family: "Sedgwick Ave", cursive;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    span {
+      margin-left: 7px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .red {
+      margin: 1px;
+      color: red;
+    }
+
+    .box0 {
+      display: flex;
+      margin-bottom: 30px;
+
+      .allcheck {
+        width: 23.5px;
+        height: 23.5px;
+        padding: 3.1px;
+        color: rgb(148, 154, 166);
+        border: 2px solid rgb(148, 154, 166);
+        border-radius: 100px;
       }
 
-      .red {
-        color: red;
+      .allcheck:hover {
+        cursor: pointer;
+      }
+    }
+
+    .box1 {
+      display: flex;
+      margin-bottom: 10px;
+
+      .check1 {
+        width: 23.5px;
+        height: 23.5px;
+        padding: 3.1px;
+        color: rgb(148, 154, 166);
+        border: 2px solid rgb(148, 154, 166);
+        border-radius: 100px;
+      }
+
+      .check1:hover {
+        cursor: pointer;
+      }
+    }
+
+    .box2 {
+      display: flex;
+      margin-bottom: 10px;
+
+      .check2 {
+        width: 23.5px;
+        height: 23.5px;
+        padding: 3.1px;
+        color: rgb(148, 154, 166);
+        border: 2px solid rgb(148, 154, 166);
+        border-radius: 100px;
+      }
+
+      .check2:hover {
+        cursor: pointer;
       }
     }
 
     .txt {
-      width: 35vw;
-      height: 180px;
+      height: 160px;
       border: 1px solid black;
       overflow-y: scroll;
+      margin-bottom: 40px;
     }
 
-    .btns {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
+    button {
+      height: 52px;
+      background-color: rgb(137, 144, 160);
+      color: white;
+      border: none;
+      border-radius: 3px;
+      font-size: 17px;
+    }
 
-      a {
-        padding: 10px 3vw;
-        margin: 2px;
-        color: white;
-      }
-      .cancel {
-        background-color: white;
-        color: black;
-      }
-
-      .next {
-        background-color: rgb(13, 13, 13);
-      }
-
-      a:hover {
-        cursor: pointer;
-      }
+    button:hover {
+      cursor: pointer;
     }
   }
 }
