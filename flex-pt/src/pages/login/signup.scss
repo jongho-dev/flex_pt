@@ -1,66 +1,87 @@
+* {
+  font-family: "Malgun Gothic";
+}
+
 .signup {
-  height: 700px;
+  height: 800px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  font-family: "Space Mono", monospace;
-
-  .signuplogo {
-    font-size: 35px;
-    text-align: center;
-    margin-bottom: 45px;
-    padding: 6px 10px;
-    border-bottom: 1px solid rgb(13, 13, 13);
-  }
 
   form {
-    width: 430px;
-    height: 430px;
-    padding: 10px 0px 80px 0;
+    width: 450px;
+    height: 750px;
+    padding: 0 15px 15px 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    // border: 1px solid red;
+
+    .signuplogo {
+      margin-bottom: 30px;
+      font-family: "Malgun Gothic";
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    h4 {
+      margin: 17px 0 3px 3px;
+    }
+
+    .idarea {
+      display: flex;
+      align-items: center;
+
+      .inputid {
+        width: 74%;
+      }
+
+      button {
+        width: 26%;
+        margin-top: 0;
+        font-size: 14.5px;
+      }
+    }
 
     input {
-      height: 45px;
-      border: 1px solid #e5e7eb;
+      height: 47px;
       padding: 0 10px;
-      font-family: "Space Mono", monospace;
-      font-size: 15px;
+      border: 1px solid #e5e7eb;
+      border-radius: 2px;
       outline: none;
+      font-size: 15px;
     }
 
-    .inputid {
-      border-bottom: none;
+    input::placeholder {
+      color: rgb(203, 203, 203);
     }
 
-    .inputpw {
-      border-bottom: none;
+    .idtext {
+      margin: 4px 0 2px 3px;
+      color: yellowgreen;
+      font-size: 14px;
     }
 
-    .name {
-      margin-top: 30px;
-      border-bottom: none;
+    .pwtext {
+      margin: 0 0 8px 3px;
+      color: gray;
+      font-size: 14px;
     }
 
-    .phone {
-      border-bottom: none;
+    .nameh {
+      margin-top: 40px;
     }
 
     button {
-      height: 45px;
-      margin-top: 50px;
-      background-color: rgb(195, 134, 87);
+      height: 47px;
+      margin-top: 25px;
+      background-color: rgb(235, 146, 78);
       color: white;
       border: none;
     }
 
     button:hover {
       cursor: pointer;
-      background-color: #c4c4c4;
-      color: black;
+      background-color: rgb(220, 131, 63);
     }
   }
 }

@@ -27,16 +27,26 @@ export default function SignUpPage() {
 
   return (
     <div className="signup">
-      <div className="signuplogo">회원가입</div>
       <form action="">
-        <input
-          type="text"
-          className="inputid"
-          placeholder="아이디"
-          onChange={(e) => {
-            setId(e.target.value);
-          }}
-        />
+        <div className="signuplogo">회원가입</div>
+        <h4>아이디</h4>
+
+        <div className="idarea">
+          <input
+            type="text"
+            className="inputid"
+            placeholder="아이디"
+            onChange={(e) => {
+              setId(e.target.value);
+            }}
+          />
+          <button>중복 확인</button>
+        </div>
+        <div className="idtext">사용가능한 아이디입니다.</div>
+        <h4>비밀번호</h4>
+        <div className="pwtext">
+          영문자, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.
+        </div>
         <input
           type="text"
           className="inputpw"
@@ -45,6 +55,7 @@ export default function SignUpPage() {
             setPw(e.target.value);
           }}
         />
+        <h4>비밀번호 확인</h4>
         <input
           type="text"
           className="inputpw_re"
@@ -53,6 +64,7 @@ export default function SignUpPage() {
             setPw_r(e.target.value);
           }}
         />
+        <h4 className="nameh">이름</h4>
         <input
           type="text"
           className="name"
@@ -61,6 +73,7 @@ export default function SignUpPage() {
             setName(e.target.value);
           }}
         />
+        <h4>휴대폰번호</h4>
         <input
           type="text"
           className="phone"
@@ -74,6 +87,8 @@ export default function SignUpPage() {
           }}
           onInput={regPhone}
         />
+        <h4>생년월일</h4>
+
         <input
           type="text"
           className="birth"

@@ -13,7 +13,7 @@ export default function SignUpCheckPage() {
   return (
     <div className="signup_c">
       <form action="">
-        <div className="signuplogo">FLEX PT</div>
+        <div className="signuplogo">회원가입</div>
         <div className="box0">
           <FaCheck
             className="allcheck"

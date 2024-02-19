@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Space Mono", monospace;
 
   form {
     width: 450px;
@@ -26,8 +25,9 @@
       padding: 0 10px;
       margin: 0 20px;
       border: 1px solid #e5e7eb;
+      border-radius: 2px;
       outline: none;
-      font-family: "Space Mono", monospace;
+      font-family: "Malgun Gothic";
       font-size: 17px;
     }
 
@@ -42,6 +42,7 @@
       color: white;
       border: none;
       border-radius: 3px;
+      font-family: "Malgun Gothic";
       font-size: 17px;
     }
 
@@ -58,6 +59,7 @@
       a {
         padding: 8px 0;
         color: black;
+        font-family: "Malgun Gothic";
         font-size: 15px;
       }
     }
