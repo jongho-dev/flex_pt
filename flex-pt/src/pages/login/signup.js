@@ -25,12 +25,27 @@ export default function SignUpPage() {
     }
   };
 
+  const [idchecktxt, setIdchecktxt] = useState("");
+  const [idtxtcolor, setIdtxtcolor] = useState("");
   const idCheck = (e) => {
-    fetch("http://localhost:5000/signupidcheck", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: id }),
-    });
+    fetch(
+      "https://port-0-flex-pt-backend-ghdys32bls5ufup0.sel5.cloudtype.app/signupidcheck",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: id }),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          setIdchecktxt("이미 사용중인 아이디입니다.");
+          setIdtxtcolor("red");
+        } else {
+          setIdchecktxt("사용 가능한 아이디입니다.");
+          setIdtxtcolor("yellowgreen");
+        }
+      });
   };
 
   return (
@@ -51,15 +66,17 @@ export default function SignUpPage() {
           <button
             onClick={(e) => {
               e.preventDefault();
-              // if (id.length > 0) {
-              //   idCheck();
-              // }
+              if (id.length > 0) {
+                idCheck();
+              }
             }}
           >
             중복 확인
           </button>
         </div>
-        <div className="idtext">사용가능한 아이디입니다.</div>
+        <div className="idtext" style={{ color: idtxtcolor }}>
+          {idchecktxt}
+        </div>
         <h4>비밀번호</h4>
         <div className="pwtext">
           영문자, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.
