@@ -25,6 +25,14 @@ export default function SignUpPage() {
     }
   };
 
+  const idCheck = (e) => {
+    fetch("http://localhost:5000/signupidcheck", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: id }),
+    });
+  };
+
   return (
     <div className="signup">
       <form action="">
@@ -40,7 +48,16 @@ export default function SignUpPage() {
               setId(e.target.value);
             }}
           />
-          <button>중복 확인</button>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              // if (id.length > 0) {
+              //   idCheck();
+              // }
+            }}
+          >
+            중복 확인
+          </button>
         </div>
         <div className="idtext">사용가능한 아이디입니다.</div>
         <h4>비밀번호</h4>

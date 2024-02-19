@@ -73,7 +73,7 @@ export default function SignUpCheckPage() {
             }
           />
           <span>이용약관 동의</span>
-          <span className="red">[필수]</span>
+          <span className="red">(필수)</span>
         </div>
         <div className="txt">
           이용약관 설명
@@ -127,7 +127,7 @@ export default function SignUpCheckPage() {
             }
           />
           <span>개인정보 수집 및 이용 동의</span>
-          <span className="red">[필수]</span>
+          <span className="red">(필수)</span>
         </div>
         <div className="txt">
           개인정보 수집 및 이용 동의 설명

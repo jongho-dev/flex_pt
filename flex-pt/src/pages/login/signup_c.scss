@@ -14,7 +14,6 @@
 
     .signuplogo {
       margin-bottom: 55px;
-      font-family: "Malgun Gothic";
       font-size: 21px;
       font-weight: bold;
     }
@@ -26,8 +25,9 @@
     }
 
     .red {
-      margin: 1px;
+      margin-left: 2px;
       color: red;
+      font-size: 13px;
     }
 
     .box0 {
@@ -50,6 +50,7 @@
 
     .box1 {
       display: flex;
+      align-items: center;
       margin-bottom: 10px;
 
       .check1 {
@@ -68,6 +69,7 @@
 
     .box2 {
       display: flex;
+      align-items: center;
       margin-bottom: 10px;
 
       .check2 {
@@ -86,9 +88,18 @@
 
     .txt {
       height: 160px;
-      border: 1px solid black;
-      overflow-y: scroll;
       margin-bottom: 40px;
+      border: 1px solid rgb(150, 150, 150);
+      overflow-y: scroll;
+    }
+
+    .txt::-webkit-scrollbar {
+      width: 11px;
+    }
+
+    .txt::-webkit-scrollbar-thumb {
+      background: lightgray;
+      border-radius: 10px;
     }
 
     button {

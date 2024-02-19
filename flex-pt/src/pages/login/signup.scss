@@ -37,6 +37,7 @@
 
       button {
         width: 26%;
+        height: 47px;
         margin-top: 0;
         font-size: 14.5px;
       }
@@ -72,11 +73,13 @@
     }
 
     button {
-      height: 47px;
+      height: 52px;
       margin-top: 25px;
       background-color: rgb(235, 146, 78);
       color: white;
       border: none;
+      border-radius: 2px;
+      font-size: 17px;
     }
 
     button:hover {
