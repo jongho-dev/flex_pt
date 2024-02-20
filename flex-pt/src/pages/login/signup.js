@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./signup.scss";
 
 export default function SignUpPage() {
-  const checkPhone = /\d{2,3}-\d{3,4}-\d{4}/g;
-  const checkBirth = /\d{6}/g;
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
   const [pw_r, setPw_r] = useState("");
@@ -11,22 +9,12 @@ export default function SignUpPage() {
   const [phone, setPhone] = useState("");
   const [birth, setBirth] = useState("");
 
-  const regPhone = (e) => {
-    e.target.value = e.target.value.replace(/[^0-9]/g, "");
-    if (e.target.value.length > 11) {
-      e.target.value = e.target.value.slice(0, -1);
-    }
-  };
-
-  const regBirth = (e) => {
-    e.target.value = e.target.value.replace(/[^0-9]/g, "");
-    if (e.target.value.length > 6) {
-      e.target.value = e.target.value.slice(0, -1);
-    }
-  };
-
+  // 아이디 중복 체크
+  const regId = /^[A-Za-z0-9]{6,}$/;
+  const [idcheckdone, setIdcheckdone] = useState(false);
   const [idchecktxt, setIdchecktxt] = useState("");
   const [idtxtcolor, setIdtxtcolor] = useState("");
+
   const idCheck = (e) => {
     fetch(
       "https://port-0-flex-pt-backend-ghdys32bls5ufup0.sel5.cloudtype.app/signupidcheck",
@@ -41,32 +29,101 @@ export default function SignUpPage() {
         if (data) {
           setIdchecktxt("이미 사용중인 아이디입니다.");
           setIdtxtcolor("red");
+          setIdcheckdone(false);
         } else {
           setIdchecktxt("사용 가능한 아이디입니다.");
           setIdtxtcolor("yellowgreen");
+          setIdcheckdone(true);
         }
       });
   };
 
+  // 비밀번호 체크
+
+  const regPw = /^[A-Za-z0-9]{8,}$/;
+  const [pwchecktxt, setPwchecktxt] = useState("");
+  const [pwtxtcolor, setPwtxtcolor] = useState("");
+
+  const pwCheck = (e) => {
+    if (regPw.test(pw)) {
+      setPwchecktxt("사용 가능한 비밀번호입니다.");
+      setPwtxtcolor("yellowgreen");
+    } else {
+      setPwchecktxt("비밀번호를 다시 확인해주세요.");
+      setPwtxtcolor("red");
+    }
+  };
+
+  // 기타 정보
+  const regName = /^[a-zA-Z가-힣]+$/;
+
+  const regPhone = /\d{2,3}-\d{3,4}-\d{4}/g;
+  const regBirth = /\d{6}/g;
+
+  const changeInputphone = (e) => {
+    e.target.value = e.target.value.replace(/[^0-9]/g, "");
+    if (e.target.value.length > 11) {
+      e.target.value = e.target.value.slice(0, -1);
+    }
+  };
+
+  const changeInputbirth = (e) => {
+    e.target.value = e.target.value.replace(/[^0-9]/g, "");
+    if (e.target.value.length > 6) {
+      e.target.value = e.target.value.slice(0, -1);
+    }
+  };
+
+  // 회원가입 제출
+  const onSubmit = (e) => {
+    if (
+      idcheckdone &&
+      regPw.test(pw) &&
+      pw == pw_r &&
+      regName.test(name) &&
+      regPhone.test(phone) &&
+      regBirth.test(birth)
+    ) {
+      fetch("http://localhost:4000/signupdone", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: id,
+          pw: pw,
+          name: name,
+          phone: phone,
+          birth: birth,
+        }),
+      }).then((res) => {});
+      alert("가입이 완료되었습니다.");
+    } else {
+      e.preventDefault();
+      alert("다시 확인해주세요.");
+    }
+  };
+
   return (
     <div className="signup">
-      <form action="">
+      <form action="/login" onSubmit={onSubmit}>
         <div className="signuplogo">회원가입</div>
         <h4>아이디</h4>
-
+        <div className="graytext">
+          영문자, 숫자를 포함한 6자 이상의 아이디를 입력해주세요.
+        </div>
         <div className="idarea">
           <input
             type="text"
             className="inputid"
             placeholder="아이디"
             onChange={(e) => {
+              setIdcheckdone(false);
               setId(e.target.value);
             }}
           />
           <button
             onClick={(e) => {
               e.preventDefault();
-              if (id.length > 0) {
+              if (regId.test(id)) {
                 idCheck();
               }
             }}
@@ -78,20 +135,24 @@ export default function SignUpPage() {
           {idchecktxt}
         </div>
         <h4>비밀번호</h4>
-        <div className="pwtext">
+        <div className="graytext">
           영문자, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.
         </div>
         <input
-          type="text"
+          type="password"
           className="inputpw"
           placeholder="비밀번호"
           onChange={(e) => {
             setPw(e.target.value);
           }}
+          onBlur={pwCheck}
         />
-        <h4>비밀번호 확인</h4>
+        <div className="pwchecktext" style={{ color: pwtxtcolor }}>
+          {pwchecktxt}
+        </div>
+        <h4 className="pw_rh">비밀번호 확인</h4>
         <input
-          type="text"
+          type="password"
           className="inputpw_re"
           placeholder="비밀번호 확인"
           onChange={(e) => {
@@ -119,7 +180,7 @@ export default function SignUpPage() {
             );
             setPhone(e.target.value);
           }}
-          onInput={regPhone}
+          onInput={changeInputphone}
         />
         <h4>생년월일</h4>
 
@@ -130,17 +191,9 @@ export default function SignUpPage() {
           onChange={(e) => {
             setBirth(e.target.value);
           }}
-          onInput={regBirth}
+          onInput={changeInputbirth}
         />
-        <button
-          onClick={async (e) => {
-            console.log(checkPhone.test(phone));
-            console.log(checkBirth.test(birth));
-            e.preventDefault();
-          }}
-        >
-          가입하기
-        </button>
+        <button>가입하기</button>
       </form>
     </div>
   );
