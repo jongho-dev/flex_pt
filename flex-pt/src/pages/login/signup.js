@@ -84,17 +84,20 @@ export default function SignUpPage() {
       regPhone.test(phone) &&
       regBirth.test(birth)
     ) {
-      fetch("http://localhost:4000/signupdone", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          id: id,
-          pw: pw,
-          name: name,
-          phone: phone,
-          birth: birth,
-        }),
-      }).then((res) => {});
+      fetch(
+        "https://port-0-flex-pt-backend-ghdys32bls5ufup0.sel5.cloudtype.app/signupdone",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            userid: id,
+            pw: pw,
+            name: name,
+            phone: phone,
+            birth: birth,
+          }),
+        }
+      ).then((res) => {});
       alert("가입이 완료되었습니다.");
     } else {
       e.preventDefault();

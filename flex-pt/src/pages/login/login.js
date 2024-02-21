@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./login.scss";
 
 export default function LoginPage() {
@@ -13,12 +14,23 @@ export default function LoginPage() {
     setPw(e.target.value);
   };
 
+  const navigate = useNavigate();
+
   const onSubmit = (e) => {
-    fetch("http://localhost:5000/login", {
+    e.preventDefault();
+    fetch("http://localhost:4000/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: id, pw: pw }),
-    }).then((res) => {});
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          navigate("/");
+        } else {
+          alert("로그인 실패");
+        }
+      });
   };
 
   return (
