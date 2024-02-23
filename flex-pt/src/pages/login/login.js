@@ -18,11 +18,14 @@ export default function LoginPage() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:4000/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: id, pw: pw }),
-    })
+    fetch(
+      "https://port-0-flex-pt-backend-ghdys32bls5ufup0.sel5.cloudtype.app/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: id, pw: pw }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data) {
