@@ -23,3 +23,18 @@ header {
 .App::-webkit-scrollbar {
   width: 0;
 }
+
+:root {
+  /* header, footer */
+  --header-back-black: rgb(13, 13, 13);
+  --header-back-blur: rgba(0, 0, 0, 0.3);
+  --header-txt-orange: rgb(195, 134, 87);
+  --header-txt-white: white;
+  --header-txt-white80: rgba(255, 255, 255, 0.87);
+
+  /* sidemenu */
+  --side-back-brown: #3c3733;
+  --side-back-white: #e5e7eb;
+  --side-border-lightgray: rgba(91, 76, 61, 0.1);
+  --side-txt-gray: rgba(91, 76, 61, 0.5);
+}

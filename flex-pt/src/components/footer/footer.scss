@@ -1,24 +1,24 @@
 .footer {
   height: 280px;
-  color: white;
-  background-color: rgb(13, 13, 13);
+  background-color: var(--header-back-black);
+  color: var(--header-txt-white);
   display: flex;
   justify-content: center;
 
-  .inline {
+  .inline_wide {
     width: 1450px;
+    padding: 30px 20px 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 20px 0 20px;
-    font-family: "Space Mono", monospace;
 
     .left {
       padding-left: 10px;
+
       .footerlogo {
-        color: rgb(195, 134, 87);
-        font-size: 25px;
         margin-bottom: 20px;
+        color: var(--header-txt-orange);
+        font-size: 25px;
       }
 
       .address {
@@ -34,13 +34,14 @@
 
     .right {
       padding-right: 20px;
+
       .sns {
         display: flex;
 
         a {
+          background-color: rgb(200, 200, 200);
           padding: 7px 7px 3px 7px;
           margin-right: 20px;
-          background-color: rgb(200, 200, 200);
           border-radius: 30px;
         }
 
@@ -51,21 +52,21 @@
     }
   }
 
-  .inline-reduct {
+  .inline_small {
     width: 950px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
-    font-family: "Space Mono", monospace;
 
     .top {
       padding-left: 10px;
+
       .footerlogo {
-        color: rgb(195, 134, 87);
-        font-size: 20px;
         margin-bottom: 30px;
+        color: var(--header-txt-orange);
+        font-size: 20px;
       }
 
       .address {
@@ -79,8 +80,9 @@
       }
     }
 
-    .right {
+    .bottom {
       padding-right: 20px;
+
       .sns {
         display: flex;
 

@@ -1,36 +1,21 @@
-:root {
-  /* color */
-  --color-black: rgb(13, 13, 13);
-  --color-black3: rgba(0, 0, 0, 0.3);
-  --color-orange: rgb(195, 134, 87);
-  --color-white: rgb(255, 255, 255);
-  --color-white8: rgba(255, 255, 255, 0.87);
-  --color-brown: #3c3733;
-
-  /* sidemenu color */
-  --side-white: #e5e7eb;
-  --side-lightgray: rgba(91, 76, 61, 0.1);
-  --side-gray: rgba(91, 76, 61, 0.5);
-}
-
 li {
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-orange);
+  color: var(--header-txt-orange);
   font-family: "Space Mono", monospace;
 }
 
 a:hover {
-  color: var(--color-white8);
+  color: var(--header-txt-white80);
 }
 
 header {
   width: 100vw;
   height: 90px;
-  background-color: var(--color-black);
+  background-color: var(--header-back-black);
   display: flex;
   justify-content: center;
   z-index: 999;
@@ -39,7 +24,7 @@ header {
     width: 1450px;
     height: 100%;
     padding: 0 20px;
-    background-color: var(--color-black);
+    background-color: var(--header-back-black);
     display: flex;
     justify-content: space-between;
     z-index: 10;
@@ -59,7 +44,7 @@ header {
 
         .logotext {
           margin-left: 6px;
-          color: var(--color-orange);
+          color: var(--header-txt-orange);
           display: inline-block;
           font-family: "Sedgwick Ave", cursive;
           font-size: 35px;
@@ -82,7 +67,7 @@ header {
         }
 
         a:hover {
-          border-bottom: 2px solid var(--color-orange);
+          border-bottom: 2px solid var(--header-txt-orange);
         }
       }
     }
@@ -108,7 +93,7 @@ header {
     width: 950px;
     height: 100%;
     padding: 0 10px;
-    background-color: var(--color-black);
+    background-color: var(--header-back-black);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,7 +102,7 @@ header {
     .menu {
       width: 50px;
       height: 50px;
-      color: var(--color-white);
+      color: var(--header-txt-white);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -139,7 +124,7 @@ header {
 
       .logotext {
         margin-left: 6px;
-        color: var(--color-orange);
+        color: var(--header-txt-orange);
         display: inline-block;
         font-family: "Sedgwick Ave", cursive;
         font-style: normal;
@@ -160,7 +145,7 @@ header {
   .backblur {
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-black3);
+    background-color: var(--header-back-blur);
     position: absolute;
     display: none;
     z-index: 13;
@@ -182,8 +167,8 @@ header {
       width: 260px;
       height: 100px;
       padding: 20px;
-      background-color: var(--color-brown);
-      color: var(--color-white);
+      background-color: var(--side-back-brown);
+      color: var(--header-txt-white);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -191,14 +176,14 @@ header {
 
     .menu {
       height: 100vh;
-      background-color: var(--side-white);
+      background-color: var(--side-back-white);
 
       li {
         padding: 15px;
-        border-bottom: 1px solid var(--side-lightgray);
+        border-bottom: 1px solid var(--side-border-lightgray);
 
         a {
-          color: var(--side-gray);
+          color: var(--side-txt-gray);
         }
       }
     }
