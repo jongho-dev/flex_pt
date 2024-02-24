@@ -4,43 +4,45 @@ import Logo from "../../images/logo/flex-pt-logo.jpeg";
 import { IoMdMenu } from "react-icons/io";
 
 export default function Header() {
-  const hd = useRef();
-  const hd_rd = useRef();
+  const inline_wide = useRef();
+  const inline_small = useRef();
   const sidemenu = useRef();
-  const sidem_openbtn = useRef();
-  const backblur = useRef();
+  const blurback = useRef();
 
-  function changeHeader() {
+  // 리사이즈
+  function resizeHeader() {
     if (window.innerWidth < 950) {
-      hd.current.style.display = "none";
-      hd_rd.current.style.display = "flex";
+      inline_wide.current.style.display = "none";
+      inline_small.current.style.display = "flex";
     } else {
-      hd.current.style.display = "flex";
-      hd_rd.current.style.display = "none";
+      inline_wide.current.style.display = "flex";
+      inline_small.current.style.display = "none";
     }
   }
 
+  // 사이드메뉴 컨트롤
   function sidemenuOpen() {
     sidemenu.current.style.transform = "translate(0,0)";
-    backblur.current.style.display = "block";
+    blurback.current.style.display = "block";
   }
 
   function sidemenuClose() {
     sidemenu.current.style.transform = "translate(-260px,0)";
-    backblur.current.style.display = "none";
+    blurback.current.style.display = "none";
   }
 
+  // 렌더링
   useEffect(() => {
-    changeHeader();
+    resizeHeader();
 
     window.addEventListener("resize", () => {
-      changeHeader();
+      resizeHeader();
     });
   }, []);
 
   return (
     <header>
-      <div className="inline" ref={hd}>
+      <div className="inline_wide" ref={inline_wide}>
         <div className="left">
           <a className="logo" href="/">
             <img src={Logo} alt="" />
@@ -72,8 +74,8 @@ export default function Header() {
           </ul>
         </div>
       </div>
-      <div className="inline-reduct" ref={hd_rd}>
-        <div className="menu" ref={sidem_openbtn} onClick={sidemenuOpen}>
+      <div className="inline_small" ref={inline_small}>
+        <div className="menu" onClick={sidemenuOpen}>
           <IoMdMenu />
         </div>
         <a className="logo" href="/">
@@ -82,7 +84,7 @@ export default function Header() {
         </a>
         <div className="sizebox"></div>
       </div>
-      <div className="backblur" ref={backblur} onClick={sidemenuClose}></div>
+      <div className="backblur" ref={blurback} onClick={sidemenuClose}></div>
       <div className="sidemenu" ref={sidemenu}>
         <div className="profile">회원 정보</div>
         <ul className="menu">
