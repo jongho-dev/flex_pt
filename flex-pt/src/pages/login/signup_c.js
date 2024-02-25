@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./signup_c.scss";
 import { FaCheck } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import Btn from "../../components/button/button";
 
 export default function SignUpCheckPage() {
   const navigate = useNavigate();
@@ -138,21 +139,20 @@ export default function SignUpCheckPage() {
           <br />
           3. ~~~~~~~~~~~
         </div>
-        <button
+        <Btn
+          text="다음"
           style={
             allcheck
               ? { backgroundColor: "rgb(235, 146,78)" }
               : { backgroundColor: "rgb(137, 144, 160)" }
           }
-          onClick={(e) => {
+          click={(e) => {
             e.preventDefault();
             if (allcheck) {
               navigate("/signup");
             }
           }}
-        >
-          다음
-        </button>
+        />
       </form>
     </div>
   );

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.scss";
+import Btn from "../../components/button/button";
+import Input from "../../components/input/input";
 
 export default function LoginPage() {
   const [id, setId] = useState("");
@@ -40,20 +42,21 @@ export default function LoginPage() {
     <div className="login">
       <form action="" onSubmit={onSubmit}>
         <div className="loginlogo">FLEX PT</div>
-        <input
+        <Input
           className="id"
+          type="text"
           placeholder="아이디"
-          onChange={handleInputId}
+          change={handleInputId}
           value={id}
         />
-        <input
-          type="password"
+        <Input
           className="pw"
+          type="password"
           placeholder="비밀번호"
-          onChange={handleInputPw}
+          change={handleInputPw}
           value={pw}
         />
-        <button>로그인</button>
+        <Btn text="로그인" className="btn" />
         <div className="links">
           <a href="/signup_c">회원가입</a>
           <a href="/findidpw">아이디, 비밀번호 찾기</a>

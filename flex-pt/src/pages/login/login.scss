@@ -20,37 +20,12 @@
       font-weight: bold;
     }
 
-    input {
-      height: 52px;
-      padding: 0 10px;
-      margin: 0 20px;
-      border: 1px solid #e5e7eb;
-      border-radius: 2px;
-      outline: none;
-      font-size: 17px;
-    }
-
-    input::placeholder {
-      color: rgb(203, 203, 203);
-    }
-
     .pw {
       border-top: none;
     }
 
     button {
-      height: 52px;
       margin: 40px 20px 0 20px;
-      background-color: rgb(235, 146, 78);
-      color: white;
-      border: none;
-      border-radius: 3px;
-      font-size: 17px;
-    }
-
-    button:hover {
-      cursor: pointer;
-      background-color: rgb(220, 131, 63);
     }
 
     .links {

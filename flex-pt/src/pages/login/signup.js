@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./signup.scss";
+import Btn from "../../components/button/button";
+import Input from "../../components/input/input";
 
 export default function SignUpPage() {
   const [id, setId] = useState("");
@@ -114,25 +116,24 @@ export default function SignUpPage() {
           영문자, 숫자를 포함한 6자 이상의 아이디를 입력해주세요.
         </div>
         <div className="idarea">
-          <input
+          <Input
             type="text"
             className="inputid"
             placeholder="아이디"
-            onChange={(e) => {
+            change={(e) => {
               setIdcheckdone(false);
               setId(e.target.value);
             }}
           />
-          <button
-            onClick={(e) => {
+          <Btn
+            text="중복 확인"
+            click={(e) => {
               e.preventDefault();
               if (regId.test(id)) {
                 idCheck();
               }
             }}
-          >
-            중복 확인
-          </button>
+          />
         </div>
         <div className="idtext" style={{ color: idtxtcolor }}>
           {idchecktxt}
@@ -141,42 +142,42 @@ export default function SignUpPage() {
         <div className="graytext">
           영문자, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.
         </div>
-        <input
+        <Input
           type="password"
           className="inputpw"
           placeholder="비밀번호"
-          onChange={(e) => {
+          change={(e) => {
             setPw(e.target.value);
           }}
-          onBlur={pwCheck}
+          blur={pwCheck}
         />
         <div className="pwchecktext" style={{ color: pwtxtcolor }}>
           {pwchecktxt}
         </div>
         <h4 className="pw_rh">비밀번호 확인</h4>
-        <input
+        <Input
           type="password"
           className="inputpw_re"
           placeholder="비밀번호 확인"
-          onChange={(e) => {
+          change={(e) => {
             setPw_r(e.target.value);
           }}
         />
         <h4 className="nameh">이름</h4>
-        <input
+        <Input
           type="text"
           className="name"
           placeholder="이름"
-          onChange={(e) => {
+          change={(e) => {
             setName(e.target.value);
           }}
         />
         <h4>휴대폰번호</h4>
-        <input
+        <Input
           type="text"
           className="phone"
           placeholder="휴대폰번호"
-          onChange={(e) => {
+          change={(e) => {
             e.target.value = e.target.value.replace(
               /(\d{3})(\d{4})(\d)/,
               "$1-$2-$3"
@@ -187,16 +188,16 @@ export default function SignUpPage() {
         />
         <h4>생년월일</h4>
 
-        <input
+        <Input
           type="text"
           className="birth"
           placeholder="생년월일 6자리"
-          onChange={(e) => {
+          change={(e) => {
             setBirth(e.target.value);
           }}
           onInput={changeInputbirth}
         />
-        <button>가입하기</button>
+        <Btn text="가입하기" />
       </form>
     </div>
   );

@@ -45,15 +45,8 @@
 
     input {
       height: 47px;
-      padding: 0 10px;
-      border: 1px solid #e5e7eb;
-      border-radius: 2px;
-      outline: none;
+      margin: 0;
       font-size: 15px;
-    }
-
-    input::placeholder {
-      color: rgb(203, 203, 203);
     }
 
     .idtext {
